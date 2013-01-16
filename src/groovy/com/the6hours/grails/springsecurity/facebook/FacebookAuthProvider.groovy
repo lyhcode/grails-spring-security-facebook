@@ -80,7 +80,7 @@ public class FacebookAuthProvider implements AuthenticationProvider, Initializin
                 }
 
                 if (!freshToken) {
-                    freshToken =  facebookAuthUtils.getAccessToken(token.code)
+                    freshToken =  facebookAuthUtils.getAccessToken(token.code, token.redirectUri)
                 }
 
                 if (freshToken) {
